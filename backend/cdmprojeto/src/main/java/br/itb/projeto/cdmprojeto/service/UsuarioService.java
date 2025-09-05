@@ -52,19 +52,41 @@ public class UsuarioService {
 	}
 
 	public Usuario save(Usuario usuario) {
-		Usuario _usuario = usuarioRepository.findByEmail(usuario.getEmail());
-		if (_usuario == null) {
-			String senha = Base64.getEncoder().encodeToString(usuario.getSenha().getBytes());
-			usuario.setSenha(senha);
-			usuario.setDataCadastro(LocalDateTime.now());
-			usuario.setStatusUsuario("ATIVO");
-			return usuarioRepository.save(usuario);
-		}
+		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Transactional
 	public Usuario login(String email, String senha) {
-		// TODO: implementar login real
+		Usuario usuario = usuarioRepository.findByEmail(email);
+
+		if (usuario != null) {
+			if (!usuario.getStatusUsuario().equals("INATIVO")) {
+				byte[] decodedPass = Base64.getDecoder()
+												.decode(usuario.getSenha());
+				
+				if (new String(decodedPass).equals(senha)) {
+					return usuario;
+				}
+			}
+		}
+		return null;
+	}
+	
+	@Transactional
+	public Usuario loginMobile(String rm, String senha) {
+		Usuario usuario = usuarioRepository.findByRm(rm);
+
+		if (usuario != null) {
+			if (!usuario.getStatusUsuario().equals("INATIVO")) {
+				byte[] decodedPass = Base64.getDecoder()
+												.decode(usuario.getSenha());
+				
+				if (new String(decodedPass).equals(senha)) {
+					return usuario;
+				}
+			}
+		}
 		return null;
 	}
 
