@@ -2,11 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { UserProvider } from "./contexts/UserContext";
 import { AnimatePresence } from 'framer-motion';
-
-
 import AdminLoginPage from './pages/admin/AdminLoginPage';
 import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import RelatorioPage from './pages/RelatorioPage';
+import SobreProjetoPage from './pages/sobre/SobreProjetoPage';
 
 
 const ProtectedRoute = ({ children }) => {
@@ -26,6 +25,7 @@ const AppContent = () => {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/login" element={<AdminLoginPage />} />
+          <Route path="/sobre" element={<SobreProjetoPage />} />
           <Route path="/dashboard" element={<AdminDashboardPage />} />
           <Route path="/relatorio" element={<ProtectedRoute><RelatorioPage /></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/login" replace />} />

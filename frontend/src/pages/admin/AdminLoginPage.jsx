@@ -129,7 +129,7 @@ const AdminLoginPage = () => {
                 className="w-full pl-10 pr-3 py-3.5 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-upliving-primary focus:border-upliving-primary transition duration-150"
                 id="username"
                 type="text"
-                placeholder="Usuário (admin)"
+                placeholder="Usuário "
                 name="email"
                 value={formData.email || ""}
                 onChange={handleChange}
@@ -145,7 +145,7 @@ const AdminLoginPage = () => {
                 className="w-full pl-10 pr-3 py-3.5 border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-upliving-primary focus:border-upliving-primary transition duration-150"
                 id="password"
                 type="password"
-                placeholder="Senha (password123)"
+                placeholder="Senha"
                 name="password"
                 value={formData.password || ""}
                 onChange={handleChange}
