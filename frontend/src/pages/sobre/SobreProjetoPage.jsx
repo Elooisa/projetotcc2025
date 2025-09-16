@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ods9 from "../../assets/ods9.png"; // coloque a imagem da ODS 9 em assets
-import fiebLogo from "../../assets/logofieb.png"; // coloque a logo da FIEB em assets
+import ods9 from "../../assets/ods9.png"; 
+import fiebLogo from "../../assets/logofieb.png"; 
 import { useNavigate } from "react-router-dom";
 
 const integrantes = [
   {
     nome: "Eloisa Ramos Silva",
-    imagem: "", // coloque o caminho da imagem
-    descricao: "Breve descrição sobre o integrante 1.",
+    imagem: "../../assets/eloisa.png", 
+    descricao: "Programadora da parte web.",
   },
   {
     nome: "Emmanuelle de Sousa Oliveira",
-    imagem: "",
-    descricao: "Breve descrição sobre o integrante 2.",
+    imagem: "../../assets/emmanuelle.png",
+    descricao: "Editora da parte da documentação.",
   },
   {
     nome: "Gabrielly Aparecida de Jesus Santos",
-    imagem: "",
-    descricao: "Breve descrição sobre o integrante 3.",
+    imagem: "../../assets/gabrielly.png",
+    descricao: "Programadora da parte mobile.",
   },
   {
     nome: "Leticia Alves da Silva",
-    imagem: "",
-    descricao: "Breve descrição sobre o integrante 4.",
+    imagem: "../../assets/leticia.png",
+    descricao: "Editora da parte da documentação.",
   },
   {
     nome: "Larissa Basilio Lima",
-    imagem: "",
-    descricao: "Breve descrição sobre o integrante 5.",
+    imagem: "../../assets/larissa.png",
+    descricao: "Editora da parte da documentação.",
   },
 ];
 

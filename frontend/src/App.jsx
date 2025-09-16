@@ -27,7 +27,7 @@ const AppContent = () => {
           <Route path="/login" element={<AdminLoginPage />} />
           <Route path="/sobre" element={<SobreProjetoPage />} />
           <Route path="/dashboard" element={<AdminDashboardPage />} />
-          <Route path="/relatorio" element={<ProtectedRoute><RelatorioPage /></ProtectedRoute>} />
+          <Route path="/relatorio" element={<RelatorioPage />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </AnimatePresence>
