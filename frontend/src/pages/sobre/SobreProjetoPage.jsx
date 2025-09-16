@@ -3,32 +3,37 @@ import { motion } from "framer-motion";
 import ods9 from "../../assets/ods9.png"; 
 import fiebLogo from "../../assets/logofieb.png"; 
 import { useNavigate } from "react-router-dom";
+import eloisaImg from "../../assets/eloisa.png";
+import emmanuelleImg from "../../assets/emmanuelle.png";
+import gabriellyImg from "../../assets/gabrielly.png";
+import leticiaImg from "../../assets/leticia.png";
+import larissaImg from "../../assets/larissa.png";
 
 const integrantes = [
   {
     nome: "Eloisa Ramos Silva",
-    imagem: "../../assets/eloisa.png", 
-    descricao: "Programadora da parte web.",
+    imagem: eloisaImg, 
+    descricao: "Desenvolvedora responsável pela interface web do projeto.",
   },
   {
     nome: "Emmanuelle de Sousa Oliveira",
-    imagem: "../../assets/emmanuelle.png",
-    descricao: "Editora da parte da documentação.",
+    imagem: emmanuelleImg,
+    descricao: "Responsável pela elaboração e organização da documentação técnica do projeto.",
   },
   {
     nome: "Gabrielly Aparecida de Jesus Santos",
-    imagem: "../../assets/gabrielly.png",
-    descricao: "Programadora da parte mobile.",
+    imagem: gabriellyImg,
+    descricao: "Desenvolvedora encarregada do desenvolvimento da aplicação mobile.",
   },
   {
     nome: "Leticia Alves da Silva",
-    imagem: "../../assets/leticia.png",
-    descricao: "Editora da parte da documentação.",
+    imagem: leticiaImg,
+    descricao: "Colaboradora dedicada à revisão e aprimoramento da documentação do projeto.",
   },
   {
     nome: "Larissa Basilio Lima",
-    imagem: "../../assets/larissa.png",
-    descricao: "Editora da parte da documentação.",
+    imagem: larissaImg,
+    descricao: "Responsável pelo apoio na produção e atualização da documentação.",
   },
 ];
 
